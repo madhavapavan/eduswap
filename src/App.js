@@ -5,11 +5,13 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Dashboard from './pages/Dashboard';
-import SettingsPage from './pages/SettingsPage';
+
 import LogoutPage from './pages/LogoutPage';
 import Explore from './pages/Explore';
 import ProfilePage from './pages/ProfilePage';
-import ProfileSetup from './pages/ProfileSetup'; // Import ProfileSetup
+import ProfileSetup from './pages/ProfileSetup';
+import Requests from './pages/Requests';
+import Chat from './pages/chat';
 
 function App() {
   return (
@@ -21,11 +23,14 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/settings" element={<SettingsPage />} />
+
             <Route path="/logout" element={<LogoutPage />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/profile" element={<ProfilePage/>} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
+            <Route path="/requests" element={<Requests />} />
+            <Route path="/chat" element={<Chat />} />
+
           </Routes>
         </main>
       </div>

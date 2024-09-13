@@ -1,23 +1,24 @@
-/* src/styles/SettingsPage.css */
-
+/* General page styling */
 .settings-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #141414;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .settings-page h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #e50914; /* Netflix red */
-  }
-  
-  .settings-page p {
-    font-size: 1.25rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f4f8; /* Light background color */
+  color: #333; /* Dark text color */
+  padding: 20px;
+}
+
+/* Heading styling */
+.settings-page h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #1e3a8a; /* Blue text color */
+}
+
+/* Paragraph styling */
+.settings-page p {
+  font-size: 1.25rem;
+  color: #555; /* Medium gray text for paragraphs */
+}

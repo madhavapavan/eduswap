@@ -1,13 +1,13 @@
 body {
   font-family: 'Arial', sans-serif;
-  color: #e5e5e5;
-  background-color: #141414;
+  color: #000000; /* Black text for readability */
+  background-color: #ffffff; /* White background */
 }
 
 .explore {
   font-family: 'Arial', sans-serif;
-  color: #e5e5e5;
-  background-color: #141414;
+  color: #000000; /* Black text for readability */
+  background-color: #ffffff; /* White background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,13 +15,13 @@ body {
 }
 
 .navbar {
-  background-color: #000;
-  color: #e5e5e5;
+  background-color: #1e3a8a; /* Blue navbar */
+  color: #ffffff; /* White text */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
   width: 100%;
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .navbar-brand a {
-  color: #e50914;
+  color: #3b82f6; /* Light blue */
   text-decoration: none;
   font-size: 1.75rem;
   font-weight: bold;
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-nav a {
-  color: #e5e5e5;
+  color: #ffffff; /* White text */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -58,14 +58,14 @@ body {
 }
 
 .navbar-nav a:hover {
-  background-color: #e50914;
-  color: #fff;
+  background-color: #3b82f6; /* Light blue for hover effect */
+  color: #ffffff; /* White text on hover */
 }
 
 .explore-header {
   margin-top: 4rem;
   text-align: center;
-  color: #e50914;
+  color: #1e3a8a; /* Blue for header text */
   font-size: 2rem;
   font-weight: bold;
 }
@@ -87,13 +87,13 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #e50914;
-  color: #fff;
+  background-color: #1e3a8a; /* Blue button */
+  color: #ffffff; /* White text */
   cursor: pointer;
 }
 
 .search-bar a {
-  color: #e50914;
+  color: #1e3a8a; /* Blue link */
   text-decoration: none;
   margin-left: 10px;
 }
@@ -106,13 +106,13 @@ body {
 }
 
 .freelancer-box {
-  background-color: #222;
+  background-color: #f0f4ff; /* Light blue background */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
   margin: 15px;
   padding: 20px;
   width: 300px;
-  color: #e5e5e5;
+  color: #000000; /* Black text */
 }
 
 .freelancer-box img {
@@ -130,12 +130,12 @@ body {
 }
 
 .skill {
-  background-color: #e50914;
+  background-color: #1e3a8a; /* Blue for skills */
   border-radius: 15px;
   padding: 5px 10px;
   margin: 2px;
   font-size: 0.8em;
-  color: #fff;
+  color: #ffffff; /* White text */
 }
 
 .buttons {
@@ -152,15 +152,15 @@ body {
 }
 
 .view-profile {
-  background-color: #333;
-  color: white;
+  background-color: #f0f4ff; /* Light blue background for view profile */
+  color: #000000; /* Black text */
 }
 
 .hire-now {
-  background-color: #e50914;
-  color: #fff;
+  background-color: #1e3a8a; /* Blue button */
+  color: #ffffff; /* White text */
 }
 
 .rating {
-  color: gold;
+  color: gold; /* Gold rating color */
 }

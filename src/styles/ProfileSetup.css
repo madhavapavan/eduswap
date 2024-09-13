@@ -1,50 +1,65 @@
-/* src/styles/ProfileSetup.css */
-
+/* General page styling */
 .profile-setup {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .profile-setup h2 {
-    margin-bottom: 20px;
-  }
-  
-  .profile-setup label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .profile-setup input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .profile-setup button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .profile-setup button:hover {
-    background-color: #0056b3;
-  }
-  
-  .profile-setup ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .profile-setup li {
-    background: #f4f4f4;
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f0f4f8; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Heading styling */
+.profile-setup h2 {
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  color: #1e3a8a; /* Blue text color */
+}
+
+/* Label styling */
+.profile-setup label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color for better readability */
+}
+
+/* Input styling */
+.profile-setup input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px;
+  background-color: #fff; /* White background for inputs */
+  color: #333; /* Dark text color */
+}
+
+/* Button styling */
+.profile-setup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.profile-setup button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* List styling */
+.profile-setup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-setup li {
+  background: #fff; /* White background for list items */
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  color: #333; /* Dark text color */
+}

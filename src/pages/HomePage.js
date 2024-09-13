@@ -4,6 +4,9 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import '../styles/HomePage.css'; // Ensure the path is correct
+import logo from '../images/eduswaplogo1.png'; // Correct path to the logo image
+import googleButton from '../images/Sign_In_With_Google_02.png'; // Import the button image
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -76,12 +79,13 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      <img src={logo} alt="EduSwap Logo" className="home-logo" />
       <h1>Welcome to the Skill Swapping Platform</h1>
       <p>Connect with your peers to exchange skills and knowledge!</p>
       <div className="home-buttons">
-        <button className="home-link" onClick={handleGoogleSignIn} disabled={loading}>
-          {loading ? 'Signing in...' : 'Sign in with Google'}
-        </button>
+        <div className="google-signin-button" onClick={handleGoogleSignIn} disabled={loading}>
+          <img src={googleButton} alt="Sign up with Google" />
+        </div>
       </div>
     </div>
   );

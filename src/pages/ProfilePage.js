@@ -1,24 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import '../styles/ProfilePage.css';
 import logo from '../images/logo.jpg'; // Update the path to your logo
 
 const ProfilePage = () => {
-  // Dummy profile data
-  const profile = {
-    name: 'Irfan',
-    title: 'Btech 3rd Year',
-    skills: ['JavaScript', 'React', 'Node.js'],
-    experience: [
-      { role: 'Frontend Developer', company: 'Company A', duration: 'Jan 2020 - Dec 2022' },
-      { role: 'Backend Developer', company: 'Company B', duration: 'Jan 2018 - Dec 2019' }
-    ],
-    certifications: ['Certified React Developer', 'AWS Certified Solutions Architect'],
-    projects: [
-      { title: 'Project A', description: 'A project description' },
-      { title: 'Project B', description: 'Another project description' }
-    ]
-  };
+  const [profile, setProfile] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const auth = getAuth();
+      const db = getFirestore();
+
+      onAuthStateChanged(auth, async (currentUser) => {
+        if (currentUser) {
+          try {
+            const userDoc = doc(db, 'users', currentUser.uid);
+            const userSnapshot = await getDoc(userDoc);
+            if (userSnapshot.exists()) {
+              setProfile(userSnapshot.data());
+            } else {
+              setError('Profile not found');
+            }
+          } catch (err) {
+            console.error('Error fetching profile:', err);
+            setError('Failed to fetch profile.');
+          } finally {
+            setLoading(false);
+          }
+        } else {
+          setError('No user is signed in.');
+          setLoading(false);
+        }
+      });
+    };
+
+    fetchProfile();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="profile-page">
@@ -30,7 +59,7 @@ const ProfilePage = () => {
           <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/explore">Explore</Link></li>
           <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/settings">Settings</Link></li>
+          <li><Link to="/chat">chat</Link></li>
           <li><Link to="/logout">Logout</Link></li>
         </ul>
       </nav>
@@ -41,45 +70,33 @@ const ProfilePage = () => {
           </div>
           <div className="profile-info">
             <h1>{profile.name}</h1>
-            <h2>{profile.title}</h2>
+            <h2>{profile.branch} - {profile.year}</h2>
           </div>
         </header>
         <main className="profile-main">
           <section className="profile-section">
             <h3>Skills</h3>
             <ul>
-              {profile.skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
+              {Array.isArray(profile.skills) ? (
+                profile.skills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))
+              ) : (
+                <li>{profile.skills}</li>
+              )}
             </ul>
           </section>
           <section className="profile-section">
             <h3>Experience</h3>
-            <ul>
-              {profile.experience.map((exp, index) => (
-                <li key={index}>
-                  <strong>{exp.role}</strong> at <em>{exp.company}</em> ({exp.duration})
-                </li>
-              ))}
-            </ul>
+            <p>{profile.experience}</p>
           </section>
           <section className="profile-section">
             <h3>Certifications</h3>
-            <ul>
-              {profile.certifications.map((cert, index) => (
-                <li key={index}>{cert}</li>
-              ))}
-            </ul>
+            <p>{profile.certifications}</p>
           </section>
           <section className="profile-section">
             <h3>Projects</h3>
-            <ul>
-              {profile.projects.map((proj, index) => (
-                <li key={index}>
-                  <strong>{proj.title}</strong>: {proj.description}
-                </li>
-              ))}
-            </ul>
+            <p>{profile.projects}</p>
           </section>
         </main>
       </div>

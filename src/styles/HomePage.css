@@ -1,5 +1,3 @@
-/* src/styles/HomePage.css */
-
 /* General page styling */
 .home-page {
   display: flex;
@@ -7,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #141414, #333); /* Dark gradient background */
+  background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Light gradient background */
   padding: 20px;
   text-align: center;
 }
@@ -15,7 +13,7 @@
 .home-page h1 {
   margin-bottom: 20px;
   font-size: 3rem;
-  color: #e5e5e5; /* Light gray text */
+  color: #000000; /* Black text */
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   animation: fadeIn 2s ease-out;
@@ -24,7 +22,7 @@
 .home-page p {
   margin-bottom: 30px;
   font-size: 1.25rem;
-  color: #e5e5e5; /* Light gray text */
+  color: #000000; /* Black text */
   font-family: 'Arial', sans-serif;
   animation: fadeIn 2s ease-out 0.5s;
 }
@@ -39,17 +37,17 @@
   display: inline-block;
   padding: 15px 25px;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #e50914; /* Netflix red */
+  color: #ffffff; /* White text */
+  background-color: #1e3a8a; /* Blue background */
   border-radius: 8px;
   text-decoration: none;
   font-family: 'Arial', sans-serif;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
 }
 
 .home-link:hover {
-  background-color: #c8102e; /* Darker red on hover */
+  background-color: #1e3a8a; /* Same blue on hover for consistency */
   transform: translateY(-2px);
 }
 
@@ -63,4 +61,30 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.home-logo {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-link:disabled {
+  background-color: #a6c8ff; /* Light blue when disabled */
+  cursor: not-allowed;
+}
+
+.google-signin-button {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.google-signin-button img {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
 }
