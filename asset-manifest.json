@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react2/static/css/main.bd350093.css",
+    "main.js": "/react2/static/js/main.86f93f22.js",
+    "static/js/453.f80d76d6.chunk.js": "/react2/static/js/453.f80d76d6.chunk.js",
+    "static/media/default-profile.png": "/react2/static/media/default-profile.92c5cf17983e3507f5c8.png",
+    "static/media/eduswaplogo1.png": "/react2/static/media/eduswaplogo1.c6e2894c2f51c485df7b.png",
+    "static/media/Sign_In_With_Google_02.png": "/react2/static/media/Sign_In_With_Google_02.b1e4a88af645afafb7e5.png",
+    "index.html": "/react2/index.html",
+    "main.bd350093.css.map": "/react2/static/css/main.bd350093.css.map",
+    "main.86f93f22.js.map": "/react2/static/js/main.86f93f22.js.map",
+    "453.f80d76d6.chunk.js.map": "/react2/static/js/453.f80d76d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd350093.css",
+    "static/js/main.86f93f22.js"
+  ]
+}
