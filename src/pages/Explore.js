@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, collection, getDocs, addDoc, query, where, doc, getDoc, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, addDoc, query, where, doc, getDoc, updateDoc, arrayRemove} from 'firebase/firestore';
 import '../styles/Explore.css';
 import defaultProfileImage from '../images/default-profile.png';
 
