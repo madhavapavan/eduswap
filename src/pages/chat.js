@@ -32,7 +32,7 @@ const Chat = () => {
               );
               const usersSnapshot = await getDocs(usersQuery);
               const users = usersSnapshot.docs.map(doc => ({
-                id: doc.id, 
+                id: doc.id, // Add the document ID
                 ...doc.data()
               }));
               setConnections(users);
@@ -95,7 +95,7 @@ const Chat = () => {
         senderId: currentUser.uid,
         receiverId: selectedUser.id,
         message: newMessage,
-        timestamp: new Date() 
+        timestamp: new Date() // Firestore will convert this to a Timestamp.
       });
       setNewMessage('');
     } catch (error) {
